@@ -1,5 +1,5 @@
 /**
- * 基本的な計算ライブラリ
+ * basic calc
  */
 
 export function add(a, b) {
@@ -15,6 +15,6 @@ export function multiply(a, b) {
 }
 
 export function divide(a, b) {
-  // BUG: ゼロ除算のチェックがない
+  if (b === 0) throw new Error("Division by zero");
   return a / b;
 }
